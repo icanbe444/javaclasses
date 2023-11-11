@@ -13,10 +13,13 @@ public class Goalkeeper extends Player{
     public int getgoalSaved(){
         return goalsSaved;
     }
-
+    
     public String tosString(){
         return "Player {" + "Name = " + getName(null) + ", Positions = " + getShirtNumber(10) + ", TransferFee = $" + getTransferfee(null) + "}"; 
         // return "goal saved = " + goalsSaved;    
+    }
+    public String getDetails(){
+        return super.toString() + "Midfielder  {" + "important Moves =" + goalsSaved + '}';
     }
 
 }

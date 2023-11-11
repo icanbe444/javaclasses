@@ -15,7 +15,10 @@ public class Forward  extends Player{
     }
 
     public String toString(){
-        return super.toString() + " Midfielder  { " + " important Moves = " + goalsScored + '}';
+        return "Player {" + "Name = " + getName(null) + ", Positions = " + getShirtNumber(10) + ", TransferFee = $" + getTransferfee(null) + "}"; 
         
+    }
+    public String getDetails(){
+        return super.toString() + "Forwarder  {" + "important Moves =" + goalsScored + '}';
     }
 }

@@ -25,19 +25,19 @@ public class Player {
         this.nationality = nationality;
     }
     // create my get method
-    public String getName(String name){
+    public String getName(){
         this.name = name;
         return this.name;
     }
-    public int getShirtNumber(int shirtNumber){
+    public int getShirtNumber(){
         this.shirtNumber = shirtNumber;
         return this.shirtNumber;
     }
-    public Double getTransferfee(Double transferefee){
-        this.transferfee = transferefee;
+    public Double getTransferfee(){
+        this.transferfee = transferfee;
         return this.transferfee;
     }
-    public String getNationality(String nationality){
+    public String getNationality(){
         this.nationality = nationality;
         return this.nationality;
     }
@@ -63,3 +63,5 @@ public class Player {
 
     
 }
+
+

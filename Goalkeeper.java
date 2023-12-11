@@ -19,7 +19,7 @@ public class Goalkeeper extends Player{
         // return "goal saved = " + goalsSaved;    
     }
     public String getDetails(){
-        return super.toString() + "Midfielder  {" + "important Moves =" + goalsSaved + '}';
+        return super.toString() + "Goalkeeper  {" + "important Moves =" + goalsSaved + '}';
     }
 
 }

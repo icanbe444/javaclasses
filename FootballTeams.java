@@ -57,18 +57,22 @@ public class FootballTeams {
             
         }
 
-       
 
        
+       
+
+       }
 
     }
     public void addPlayer(Player player){
         team.add(player);
+    }
+    public void removePlayer(Player player){
+        team.remove(player);
     }
 
 
    
 }
 
-
-
+}

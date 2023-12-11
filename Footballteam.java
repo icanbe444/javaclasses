@@ -1,123 +1,55 @@
+import java.util.ArrayList;
 
-// import java.util.ArrayList;
+public class FootballTeams{
+    ArrayList<Player>team;
+    private String teamName;
+    private String teammanager;
 
-// public class Footballteam {
-    
-//     //Fields for FootballTeam concrete class
-//     private ArrayList<Player> team;
-//     private String teamName;
-//     private String manager;
+    public FootballTeams(String teamName, String teamManager){
+        this.teamName = teamName;
+        this.teamManager = teamManager;
+        this.team = new ArrayList<>();
+    }
 
-//     //Full Specialised Constructor
-//     public Footballteam(String name, String manager) {
-//         this.team = new ArrayList<>();
-//         this.teamName = name;
-//         this.manager = manager;
-//     }
+    public String getManager(){
+        return this.teamManager;
+    }
+    public String getTeamName(){
+        return this.teamName;
+    }
 
-//     public void addPlayer(Player player){
-//         team.add(player);
-//     }
-    
-//     public void removePlayer(Player player){
-//         team.remove(player);
-//     }
+    public double getTotalClubFee(){
+        for (Player player: team){
+            totalfee += player.getTransferfee();
+        }
+        return totalfee;
+    }
 
-//     public void listPlayerDetails(){
-//         for (Player player : team){
-//             if(player instanceof Defender){
-//                 Defender defender = (Defender)player;
-//                 System.out.println(player.toString() + " , Defensive moves = " + defender.getDefendingMoves());
-//             }else if(player instanceof Goalkeeper){
-//                 Goalkeeper goalkeeper = (Goalkeeper)player;
-//                 System.out.println(player.toString() + " , Goals Saved = " + goalkeeper.getGoalsSaved());
-//             }else if(player instanceof Forward){
-//                 Forward forward = (Forward)player;
-//                 System.out.println(player.toString() + " , Goals Scored = " + forward.getGoalsScored());
-//             }else if(player instanceof Midfielder){
-//                 Midfielder midfielder = (Midfielder)player;
-//                 System.out.println(player.toString() + " , Goals Scored = " + midfielder.getGoalsScored() + " , Important Moves = " + midfielder.getImportantMoves());
-//             }
-//         }
-//     }
+    public String getPlayer(){
+        for(Player player: team){
+            String output = "\n"
+            output += player.getName() "transfer fee" + " " + player.getTransferfee() + "
+            Shirt Number " + player.getShirtNumber; 
+            return output;
+        }
 
-//     public void listPlayerDetails2(){
-//         for (Player player : team){
-//             if(player instanceof Defender){
-//                 Defender defender = (Defender)player;
-//                 System.out.println(defender.getDetails());
-//             }else if(player instanceof Goalkeeper){
-//                 Goalkeeper goalkeeper = (Goalkeeper)player;
-//                 System.out.println(goalkeeper.getDetails());
-//             }else if(player instanceof Forward){
-//                 Forward forward = (Forward)player;
-//                 System.out.println(forward.getDetails());
-//             }else if(player instanceof Midfielder){
-//                 Midfielder midfielder = (Midfielder)player;
-//                 System.out.println(midfielder.getDetails());
-//             }
-//         }
-//     }
+    }
+    public void getPlayerall(){
+        for(Player player: team){
+            if(player instanceof Defender){
+                Defender defender = (Defender)player;
+                System.out.println(player.toString());
+            }
+        }
+    }
+
+    public void addPlayer(Player player){
+        team.addPlayer(player);
+    }
+
+    public void removePlayer(Player player){
+        team.removePlayer(player)
+;    }
 
 
-//     //Getters Methods
-//     public ArrayList<Player> getTeam() {
-//         return team;
-//     }
-
-//     public String getTeamName() {
-//         return teamName;
-//     }
-
-//     public String getManager() {
-//         return manager;
-//     }
-
-//     public void setTeamName(String teamName) {
-//         this.teamName = teamName;
-//     }
-
-//     public void setManager(String manager) {
-//         this.manager = manager;
-//     }
-
-
-//     public double getTotalClubFees(){
-//         double totalFee = 0;
-//          for (Player player : team){
-//             totalFee += player.getTransferFee();
-//          }
-//          return totalFee;
-//     }
-    
-//     //Other Method
-//     public String getPlayerList(){
-//         String output = "";
-//         for (Player player : team){
-//             output += player.getName() + "( Nationality: " + player.getNationality() + "  Transfer Fees: " + player.getTransferFee() + ")" + "\n";
-//         }
-//         return output;
-//     }
-
-//        public String getSpecificPlayerList(String nationality){
-//         String output = "";
-//         for (Player player : team){
-//             if (player.getNationality().compareTo(nationality) == 0)
-//             output += player.getName() + "( Nationality: " + player.getNationality() + "  Transfer Fees: " + player.getTransferFee() + ")" + "\n";
-//         }
-//         return output;
-//     }
-    
-//     //toStrign Method
-//     public String toString() {
-//         String output = "";
-//         output += "\nThe Football Team name is " + getTeamName();
-//         output += "\nManager is " + getManager();
-//         output += "\nTotal Fees is " + this.getTotalClubFees();
-//         output += "\n\nThe Players are:\n" + getPlayerList();
-        
-//         return output;
-//     }
-      
-    
-// }
+}
